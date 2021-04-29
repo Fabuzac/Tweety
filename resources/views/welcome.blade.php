@@ -49,6 +49,7 @@
             <div class="has-text-centered">
                 <h1 class="title">Tweety</h1>
                 <p class="subtitle">Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</p>
+                <a href="{{ url('/home') }}" class="button is-primary">Home</a>
             </div>
         </div>           
     </body>

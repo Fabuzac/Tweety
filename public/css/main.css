@@ -4,3 +4,11 @@
 body {
     background-color: rgb(255, 255, 255);
 }
+
+.logo {
+    width: 10%;
+}
+
+.rounded-full {
+    border-radius: 50%;
+}
