@@ -12,3 +12,28 @@ body {
 .rounded-full {
     border-radius: 50%;
 }
+
+.width-20 {
+    width: 20%;
+}
+
+.width-100{
+    width: 100%;
+}
+
+.border-none {
+    border: none !important;
+}
+
+.border-blue {
+    border: 1px solid #40b9ff;
+    border-radius: 0.5em;
+}
+
+.flex-shrink {
+    flex-shrink: 0;
+}
+
+.border-bottom {
+    border-bottom: 1px;
+}

@@ -30,17 +30,15 @@
 </head>
 <body>
     <div id="app">
-        <section class="px-8">
-            <header>
-                <h1>
+        <section class="px-2">
+            <header class="container mx-auto">                
                     <img src="/images/logo.png" alt="Tweety logo" class="logo">
-                </h1>
             </header>
         </section>
         @yield('header')
 
         <section class="p-4">
-            <main class="p-4">
+            <main class="container mx-auto">
                 @yield('content')
             </main>
         </section>
