@@ -32,7 +32,7 @@
     <div id="app">
         <section class="px-2">
             <header class="container mx-auto">                
-                    <img src="/images/logo.png" alt="Tweety logo" class="logo">
+                <img src="/images/logo.png" alt="Tweety logo" class="logo">
             </header>
         </section>
         @yield('header')

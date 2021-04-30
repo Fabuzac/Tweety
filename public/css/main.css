@@ -13,8 +13,16 @@ body {
     border-radius: 50%;
 }
 
+.width-10 {
+    width: 10%;
+}
+
 .width-20 {
     width: 20%;
+}
+
+.width-90 {
+    width: 90%;
 }
 
 .width-100{
@@ -36,4 +44,19 @@ body {
 
 .border-bottom {
     border-bottom: 1px;
+}
+
+.is-danger {
+    color: red;
+}
+
+.word-wrap {
+    word-wrap: break-word;
+}
+
+.aside-friends {
+    border-radius: 1em;
+    padding: 1%;
+    background-color: #68acd36b;
+    height: max-content;
 }

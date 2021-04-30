@@ -35,7 +35,7 @@
                     @if (Route::has('login'))
                         <div class="buttons">
                             @auth
-                                <a href="{{ url('/home') }}" class="button is-primary">Home</a>
+                                <a href="{{ url('/home') }}" class=""></a>
                                 @else
                                     <a href="{{ route('login') }}" class="button is-primary"><strong>Log in</strong></a>
                                 @if (Route::has('register'))
@@ -47,8 +47,8 @@
                 </div>
                 
             </nav>
-            <div class="has-text-centered">
-                <h1 class="title">Tweety</h1>
+            <div class="has-text-centered">                
+                <img src="/images/logo.png" alt="Tweety logo" class="logo">
                 <p class="subtitle">Laravel v{{ Illuminate\Foundation\Application::VERSION }} (PHP v{{ PHP_VERSION }})</p>
                 <a href="{{ url('/home') }}" class="button is-primary">Home</a>
                 <a href="{{ url('/login') }}" class="button is-primary">login</a>
