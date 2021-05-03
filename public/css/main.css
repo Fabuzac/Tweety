@@ -69,7 +69,6 @@ body {
     height: max-content;
 }
 
-
 .relative {
     position: relative;
 }
@@ -81,5 +80,14 @@ body {
     left: 40%;
     /* top: 46%;
     width: 150px;
-    left: calc(50% - 75%); */
+    left: calc(50% - 75px); 
+    transform: translateX(-50%) translateY(50%)  */
+}
+
+.banner {
+    border-radius: 1em;
+}
+
+.shadow {
+    box-shadow: 8px 5px #c4c4c3;
 }

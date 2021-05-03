@@ -32,7 +32,7 @@
     <div id="app">
         <section class="px-2">
             <header class="container mx-auto">                
-                <img src="/images/logo.png" alt="Tweety logo" class="logo">
+                <a href="/"><img src="/images/logo.png" alt="Tweety logo" class="logo"></a>
             </header>
         </section>
         @yield('header')
@@ -41,7 +41,11 @@
             <main class="container mx-auto">
                 <div class="is-flex">
                     {{-- column left --}}
-                    <div class="is-offset-0-mobile is-flex-grow-1 width-20 mr-6">@include('_sidebar-links')</div>
+                    @if (auth()->check())
+                        <div class="is-offset-0-mobile is-flex-grow-1 width-20 mr-6">
+                            @include('_sidebar-links')
+                        </div>
+                    @endif
                     
                     {{-- column center --}}
                     <div class="is-offset-0-mobile is-full width-90">
@@ -49,9 +53,11 @@
                     </div>
             
                     {{-- column right --}}
-                    <div class="aside-friends is-offset-0-mobile is-flex-grow-1 width-25 ml-6">
-                        @include('_friends-list')
-                    </div>
+                    @if (auth()->check())
+                        <div class="aside-friends is-offset-0-mobile is-flex-grow-1 width-25 ml-6">
+                            @include('_friends-list')
+                        </div>
+                    @endif
                 </div>
             </main>
         </section>

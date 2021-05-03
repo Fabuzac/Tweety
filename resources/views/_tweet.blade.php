@@ -1,10 +1,10 @@
-<div class="is-flex p-4 border-bottom">
+<div class="is-flex p-4 {{ $loop->last ? '' : 'border-bottom' }}">
     <div class="mr-4 width-10">
         <a href="{{ route('profile', $tweet->user->name) }}">
             <img 
                 src="https://i.pravatar.cc/200?u={{ $tweet->user->email }}" 
                 alt="Friend profile picture" 
-                class="rounded-full p-1 width-90"
+                class="rounded-full p-1 width-90 shadow"
             >
         </a>
     </div>

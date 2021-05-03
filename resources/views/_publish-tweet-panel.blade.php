@@ -14,7 +14,7 @@
             <img 
                 src="{{ auth()->user()->avatar }}" 
                 alt="Profile picture" 
-                class="rounded-full p-1 width-10"
+                class="rounded-full p-1 width-10 shadow"
             >
             <button type="submit" class="button has-background-info-dark shadow py-2 px-2 text-white">Tweety !</button>
         </div>
