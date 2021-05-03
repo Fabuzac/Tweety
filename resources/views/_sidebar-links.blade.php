@@ -1,6 +1,6 @@
 <ul>
     <li>
-        <a class="has-text-weight-bold is-size-4 mb-3 block" href="/">Home</a>
+        <a class="has-text-weight-bold is-size-4 mb-3 block" href="{{ route('home') }}">Home</a>
     </li>
 
     <li>
@@ -24,7 +24,7 @@
     </li>
 
     <li>
-        <a class="has-text-weight-bold is-size-4 mb-3 block" href="/">Profile</a>
+        <a class="has-text-weight-bold is-size-4 mb-3 block" href="{{ route( 'profile', auth()->user() ) }}">Profile</a>
     </li>
 
     <li>

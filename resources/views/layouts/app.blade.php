@@ -39,7 +39,20 @@
 
         <section class="p-4">
             <main class="container mx-auto">
-                @yield('content')
+                <div class="is-flex">
+                    {{-- column left --}}
+                    <div class="is-offset-0-mobile is-flex-grow-1 width-20 mr-6">@include('_sidebar-links')</div>
+                    
+                    {{-- column center --}}
+                    <div class="is-offset-0-mobile is-full width-90">
+                       @yield('content')
+                    </div>
+            
+                    {{-- column right --}}
+                    <div class="aside-friends is-offset-0-mobile is-flex-grow-1 width-25 ml-6">
+                        @include('_friends-list')
+                    </div>
+                </div>
             </main>
         </section>
 
