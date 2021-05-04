@@ -25,7 +25,7 @@
             <div class="is-flex">
                 @if (auth()->user()->is($user))
                 {{-- @can ('edit', $user)@endcan --}}
-                    <a href="/profiles/{{ $user->name }}/edit" class="button rounded-full shadow py-2 px-4 text-xs">Edit Profile</a>
+                    <a href="{{ $user->path('edit') }}" class="button rounded-full shadow py-2 px-4 text-xs">Edit Profile</a>
                 
                 @endif
 

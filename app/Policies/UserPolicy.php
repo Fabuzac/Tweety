@@ -9,15 +9,8 @@ class UserPolicy
 {
     use HandlesAuthorization;
 
-    public function __construct()
+    public function edit(User $currentUser, User $user)
     {
-        //
-    }
-
-    public function edit(User $currentUser, User $user) {
-
-        $this->authorize('edit', $user);
-
-        return view('profiles.edit', compact('user'));
+        return $currentUser->is($user);
     }
 }

@@ -10,7 +10,7 @@
     </div>
 
     <div class="width-90">
-        <a class="" href="{{ route('profile', $tweet->user->name) }}">
+        <a class="" href="{{ route( 'profile', auth()->user() ) }}">
             <h5 class="font-bold mb-4">{{ $tweet->user->name }}</h5>
         </a>
         <p class="text word-wrap">
