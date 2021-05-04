@@ -23,20 +23,24 @@
             </div>
 
             <div class="is-flex">
-                <a href="#" class="button rounded-full shadow py-2 px-4 text-xs">Edit Profile</a>
+                @if (auth()->user()->is($user))
+                {{-- @can ('edit', $user)@endcan --}}
+                    <a href="/profiles/{{ $user->name }}/edit" class="button rounded-full shadow py-2 px-4 text-xs">Edit Profile</a>
                 
-                <form method="POST" action="/profiles/{{ $user->name }}/follow">
-                    @csrf
+                @endif
 
-                    <button type="submit" class="button is-info bg-blue-500 rounded-full shadow py-2 px-4 text-xs">
-                        {{ auth()->user()->following($user) ? 'Unfollow me' : 'Follow me' }}
-                    </button>
-                </form>
+                @if (auth()->user()->isNot($user))
+                    <form method="POST" action="/profiles/{{ $user->name }}/follow">
+                        @csrf
+
+                        <button type="submit" class="button is-info bg-blue-500 rounded-full shadow py-2 px-4 text-xs">
+                            {{ auth()->user()->following($user) ? 'Unfollow me' : 'Follow me' }}
+                        </button>
+                    </form>
+                @endif
 
             </div>
-        </div>
-
-        
+        </div>        
     </div>
 
     <p class="text-sm pb-4">
