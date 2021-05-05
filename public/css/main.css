@@ -84,6 +84,14 @@ body {
     transform: translateX(-50%) translateY(50%)  */
 }
 
+.image-preview {
+    width: 25%;
+    border-radius: 50%;
+    box-shadow: 3px 5px 4px #c4c4c3;
+    padding: 2px;
+    margin-top: 2%;
+}
+
 .banner {
     border-radius: 1em;
 }

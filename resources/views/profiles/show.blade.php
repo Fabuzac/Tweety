@@ -11,7 +11,7 @@
 
             <img 
                 src="{{ $user->avatar }}" 
-                alt=""
+                alt="Profile picture"
                 class="rounded-full p-1 image-profile-banner shadow"
             >
         </div>
@@ -30,7 +30,7 @@
                 @endif
 
                 @if (auth()->user()->isNot($user))
-                    <form method="POST" action="/profiles/{{ $user->name }}/follow">
+                    <form method="POST" action="{{ $user->path('follow') }}">
                         @csrf
 
                         <button type="submit" class="button is-info bg-blue-500 rounded-full shadow py-2 px-4 text-xs">
