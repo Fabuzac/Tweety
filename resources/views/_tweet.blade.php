@@ -2,7 +2,7 @@
     <div class="mr-4 width-10">
         <a href="{{ route('profile', $tweet->user->name) }}">
             <img 
-                src="https://i.pravatar.cc/200?u={{ $tweet->user->email }}" 
+                src="{{ $tweet->user->avatar }}" 
                 alt="Friend profile picture" 
                 class="rounded-full p-1 width-90 shadow"
             >
