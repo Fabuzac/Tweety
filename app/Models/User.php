@@ -34,13 +34,14 @@ class User extends Authenticatable
         //return "https://i.pravatar.cc/200?u=" . $this->email;
         // return asset($value);
         
-        return asset('storage/'.$value);
+        return asset('storage/'.$value ? : '/images/default-avatar.jpg');
     }
 
-    // Next episode...
-    //    public function setPasswordAttribute($value)
-    //    {
-    //    }
+    public function setPasswordAttribute($value) {
+
+        $this->attributes['password'] = bcrypt($value);
+
+    }
 
     public function timeline() {
 

@@ -1,6 +1,6 @@
 <div class="is-flex p-4 {{ $loop->last ? '' : 'border-bottom' }}">
     <div class="mr-4 width-10">
-        <a href="{{ route('profile', $tweet->user->name) }}">
+        <a href="{{ route('profile', $tweet->user->username) }}">
             <img 
                 src="{{ $tweet->user->avatar }}" 
                 alt="Friend profile picture" 
@@ -10,7 +10,7 @@
     </div>
 
     <div class="width-90">
-        <a class="" href="{{ route( 'profile', auth()->user() ) }}">
+        <a class="" href="{{ route('profile', $tweet->user->username) }}">
             <h5 class="font-bold mb-4">{{ $tweet->user->name }}</h5>
         </a>
         <p class="text word-wrap">

@@ -4,7 +4,7 @@
     </li>
 
     <li>
-        <a class="has-text-weight-bold is-size-4 mb-3 block" href="/">Explore</a>
+        <a class="has-text-weight-bold is-size-4 mb-3 block" href="/explore">Explore</a>
     </li>
 
     <li>

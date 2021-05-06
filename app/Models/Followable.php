@@ -28,6 +28,8 @@ trait Followable
         }
 
         return $this->follow($user);
+
+        // $this->follows()->toggle($user);
     }
 
     public function following(User $user) {

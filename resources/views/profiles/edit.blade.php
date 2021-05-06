@@ -27,31 +27,6 @@
             </div>
         </div>
 
-        {{-- avatar --}}
-        <div class="form-group row is-flex">
-          
-            <label for="avatar" class="col-md-4 col-form-label text-md-right">Avatar</label>
-            
-            <div class="col-md-6">
-                <input 
-                    id="avatar" 
-                    type="file" 
-                    class="form-control @error('avatar') is-invalid @enderror" 
-                    name="avatar"                      
-                    autocomplete="avatar"
-                    required 
-                >
-            
-                <img src="{{ $user->avatar }}" alt="avatar" class="image-preview">
-
-                @error('avatar')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-            </div>
-        </div>
-
         {{-- name --}}
         <div class="form-group row">
             <label for="name" class="col-md-4 col-form-label text-md-right">{{ __('Name') }}</label>
@@ -73,7 +48,31 @@
                     </span>
                 @enderror
             </div>
-        </div>                       
+        </div>
+        
+        {{-- avatar --}}
+        <div class="form-group row is-flex">
+          
+            <label for="avatar" class="col-md-4 col-form-label text-md-right">Avatar</label>
+            
+            <div class="col-md-6">
+                <input 
+                    id="avatar" 
+                    name="avatar"                                          
+                    type="file" 
+                    class="form-control @error('avatar') is-invalid @enderror" 
+                    accept="image/*"
+                >
+            
+                <img src="{{ $user->avatar }}" alt="avatar" class="image-preview">
+
+                @error('avatar')
+                    <span class="invalid-feedback" role="alert">
+                        <strong>{{ $message }}</strong>
+                    </span>
+                @enderror
+            </div>
+        </div> 
 
         {{-- email --}}
         <div class="form-group row">

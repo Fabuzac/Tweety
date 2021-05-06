@@ -26,11 +26,11 @@
                 @if (auth()->user()->is($user))
                 {{-- @can ('edit', $user)@endcan --}}
                     <a href="{{ $user->path('edit') }}" class="button rounded-full shadow py-2 px-4 text-xs">Edit Profile</a>
-                
                 @endif
 
                 @if (auth()->user()->isNot($user))
-                    <form method="POST" action="{{ $user->path('follow') }}">
+                                                {{-- route('follow', $user->name) --}}
+                    <form method="POST" action="{{ $user->path('follow') }}"> 
                         @csrf
 
                         <button type="submit" class="button is-info bg-blue-500 rounded-full shadow py-2 px-4 text-xs">
