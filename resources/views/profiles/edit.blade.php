@@ -137,6 +137,8 @@
                 <button type="submit" class="btn btn-primary">
                     Apply Changes
                 </button>
+
+                <a href="{{ $user->path() }}" class="ml-6">Cancel</a>
             </div>
         </div>
     </form>

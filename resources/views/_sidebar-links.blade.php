@@ -8,26 +8,21 @@
     </li>
 
     <li>
-        <a class="has-text-weight-bold is-size-4 mb-3 block" href="/">Notifications</a>
-    </li>
-
-    <li>
-        <a class="has-text-weight-bold is-size-4 mb-3 block" href="/">Message</a>
-    </li>
-
-    <li>
-        <a class="has-text-weight-bold is-size-4 mb-3 block" href="/">Bookmarks</a>
-    </li>
-
-    <li>
-        <a class="has-text-weight-bold is-size-4 mb-3 block" href="/">Lists</a>
-    </li>
-
-    <li>
         <a class="has-text-weight-bold is-size-4 mb-3 block" href="{{ route( 'profile', auth()->user() ) }}">Profile</a>
     </li>
 
     <li>
-        <a class="has-text-weight-bold is-size-4 mb-3 block" href="/">More</a>
+        <a class="has-text-weight-bold is-size-4 mb-3 block"
+            href="{{ route('logout') }}"
+            onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
+        >
+            {{ __('Logout') }}
+        </a>
+
+        <form id="logout-form" method="POST" action="{{ route('logout') }}">
+            @csrf
+        
+        </form>
+
     </li>
 </ul>

@@ -17,7 +17,7 @@
         </div>
 
         <div class="is-flex is-justify-content-space-between items-center">
-            <div>
+            <div class="name-container">
                 <h2 class="font-bold is-size-3 mb-0">{{ $user->name }}</h2>
                 <p class="text-sm">Joined {{ $user->created_at->diffForHumans() }}</p>
             </div>
@@ -52,6 +52,7 @@
     </p>
 
     @include('_timeline', [
-        'tweets' => $user->tweets
+        'tweets' => $tweets
     ])
+
 @endsection

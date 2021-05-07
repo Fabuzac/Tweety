@@ -4,4 +4,6 @@
     @empty
         <p class="p-4">No tweets yet.</p> 
     @endforelse
+    
 </div>
+<div class="mt-5 display-links">{{ $tweets->links() }}</div>

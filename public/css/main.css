@@ -99,3 +99,24 @@ body {
 .shadow {
     box-shadow: 8px 5px #c4c4c3;
 }
+
+.card-body {
+    background: #d8f5ff;
+}
+
+.name-container {
+    max-width: 270px;
+}
+
+svg {
+    max-width: 5%;
+}
+
+.display-links {
+    text-align: center;
+    width: 100%;
+}
+
+.display-links div {
+    padding: 1%;
+}

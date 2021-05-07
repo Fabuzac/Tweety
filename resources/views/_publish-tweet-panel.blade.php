@@ -5,7 +5,8 @@
             class="width-100 textarea border-none" 
             name="body" 
             placeholder="What's up Doc?"
-            
+            required
+                
         ></textarea>
 
         <hr class="my-4" />

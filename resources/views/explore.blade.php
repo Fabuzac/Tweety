@@ -10,10 +10,12 @@
             <div>
                 <h4 class="mb-5 font-bold">{{ '@' . $user->username }}</h4>
             </div>
+            
         </a>
     @endforeach
 
     {{ $users->links() }}
+
 </div>
 
   
