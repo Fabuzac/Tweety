@@ -13,6 +13,10 @@ body {
     border-radius: 50%;
 }
 
+.width-8 {
+    width: 8%;
+}
+
 .width-10 {
     width: 10%;
 }
@@ -119,4 +123,14 @@ svg {
 
 .display-links div {
     padding: 1%;
+}
+
+.gradient-background {
+    /* Permalink - use to edit and share this gradient: https://colorzilla.com/gradient-editor/#f0f9ff+0,cbebff+47,a1dbff+100;Blue+3D+%2313 */
+    background: #f0f9ff; /* Old browsers */
+    background: -moz-linear-gradient(left,  #f0f9ff 0%, #cbebff 47%, #a1dbff 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(left,  #f0f9ff 0%,#cbebff 47%,#a1dbff 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to right,  #f0f9ff 0%,#cbebff 47%,#a1dbff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#a1dbff',GradientType=1 ); /* IE6-9 */
+
 }
