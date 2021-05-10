@@ -4,6 +4,10 @@
     </li>
 
     <li>
+        <a class="has-text-weight-bold is-size-4 mb-3 block" href="/contact">Contact us</a>
+    </li>
+
+    <li>
         <a class="has-text-weight-bold is-size-4 mb-3 block" href="/explore">Explore</a>
     </li>
 

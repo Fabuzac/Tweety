@@ -37,6 +37,13 @@ Route::middleware('auth')->group(function () {
     /* Like & Dislike */
     Route::post('/tweets/{tweet}/like', [App\Http\Controllers\TweetLikesController::class, 'store']);
     Route::delete('/tweets/{tweet}/like', [App\Http\Controllers\TweetLikesController::class, 'destroy']);
+
+    /* Contact Tweety */
+    Route::get('/contact', [App\Http\Controllers\ContactController::class, 'show']);
+    Route::post('/contact', [App\Http\Controllers\ContactController::class, 'store']);
+    
+// Route::get('app/contact', [App\Http\Controllers\ContactController::class, 'store'], 'ContactController@show');
+// Route::post('contact', [App\Http\Controllers\ContactController::class, 'store'], 'ContactController@store');
 });
 
 /* Profiles Page */
