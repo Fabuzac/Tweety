@@ -3,8 +3,10 @@
 @section('content')
     <div id="wrapper">
         <div id="page" class="container">
-            <h1 class="heading has-text-weight-bold is-size-4">Contact Tweety Team</h1>
-
+            <div class="is-centered">
+                <h1 class="heading has-text-weight-bold is-size-4">Contact Tweety Team</h1>
+                <img src="images/team.jpeg" alt="" class="border-blue width-40">
+            </div>
             <form method="POST" action="/contact">
                 @csrf <!-- Cross-site request forgery -->
 
@@ -49,9 +51,9 @@
                 
                 {{-- email --}}
                 <div class="field">
-                    <label class="label" for="email">Email Address</label>
+                    <label class="label " for="email">Email Address</label>
                     <div>
-                        <input type="text" id="emai" name="email">
+                        <input class="input" type="text" id="emai" name="email">
                     </div>
 
                     @error('email')
