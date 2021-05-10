@@ -48,14 +48,18 @@ class User extends Authenticatable
         $ids = $this->follows()->pluck('id');
         $ids->push($this->id);
 
-        return Tweet::whereIn('user_id', $ids)->latest()->paginate(30);
+        return Tweet::whereIn('user_id', $ids)->withLikes()->orderByDesc('id')->paginate(30);            
 
-    }
+    }    
 
     public function tweets() {
 
         return $this->hasMany(Tweet::class)->latest();
 
+    }
+
+    public function likes() {
+        return $this->hasMany(Like::class);
     }
 
     // public function getRouteKeyName() {

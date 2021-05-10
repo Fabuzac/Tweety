@@ -1,4 +1,4 @@
-<h3 class="has-text-weight-bold is-size-3 mb-4">Following</h3>
+<h3 class="has-text-weight-bold is-size-3 mb-4 is-centered">Following</h3>
 
 <ul>
     @forelse(auth()->user()->follows as $user)

@@ -16,5 +16,51 @@
         <p class="text word-wrap">
             {{ $tweet->body }}    
         </p>
+
+        @auth
+            <div class="is-flex mt-3">
+                {{-- Like --}}
+                <form
+                    class="is-flex"
+                    method="POST"
+                    action="/tweets/{{ $tweet->id }}/like"
+                >
+                    @csrf
+                                        
+                    <button type="submit" class="button border-none mr-1">
+                        <span class="icon has-text-link">
+                            <i class='fa fa-thumbs-up'></i>                    
+                         </span>
+                    </button>
+
+                    <div class="mt-3 mb-3 mr-2">                    
+                        <span>
+                            {{ $tweet->likes ?: 0 }}
+                        </span>
+                    </div>    
+                </form>
+                
+                {{-- Dislike --}}
+                <form
+                    class="is-flex ml-3" 
+                    method="POST"
+                    action="/tweets/{{ $tweet->id }}/like"
+                >
+                    @csrf
+                    @method('DELETE')
+
+                    {{-- {{ $tweet->isDislikedBy(current_user()) ? 'text-blue-500' : 'text-gray-500' }} --}}
+                    <button type="submit" class="button border-none mr-1">
+                        <span class="icon has-text-danger">
+                            <i class='fa fa-thumbs-down'></i>
+                        </span>   
+                    </button>
+
+                    <div class="mt-3 mb-3 is-flex">
+                        {{ $tweet->dislikes ?: 0 }}                                      
+                    </div>
+                </form>
+            </div>
+        @endauth
     </div>
 </div>

@@ -33,11 +33,13 @@ Route::middleware('auth')->group(function () {
 
     /* Explore page */
     Route::get('/explore', [App\Http\Controllers\ExploreController::class, 'index']);
+
+    /* Like & Dislike */
+    Route::post('/tweets/{tweet}/like', [App\Http\Controllers\TweetLikesController::class, 'store']);
+    Route::delete('/tweets/{tweet}/like', [App\Http\Controllers\TweetLikesController::class, 'destroy']);
 });
 
 /* Profiles Page */
 Route::get('/profiles/{user:username}', [App\Http\Controllers\ProfilesController::class, 'show'])->name('profile');
-
-
 
 Auth::routes();

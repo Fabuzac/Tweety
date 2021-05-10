@@ -5,10 +5,6 @@ body {
     background-color: rgb(255, 255, 255);
 }
 
-.logo {
-    width: 10%;
-}
-
 .rounded-full {
     border-radius: 50%;
 }
@@ -17,7 +13,8 @@ body {
     width: 8%;
 }
 
-.width-10 {
+.width-10,
+.logo {
     width: 10%;
 }
 
@@ -69,8 +66,12 @@ body {
 .aside-friends {
     border-radius: 1em;
     padding: 1%;
-    background-color: #68acd36b;
+    background-color: #97c6e16b;
     height: max-content;
+}
+
+.aside-friends a {
+    color: rgb(26, 26, 26);
 }
 
 .relative {
@@ -132,5 +133,20 @@ svg {
     background: -webkit-linear-gradient(left,  #f0f9ff 0%,#cbebff 47%,#a1dbff 100%); /* Chrome10-25,Safari5.1-6 */
     background: linear-gradient(to right,  #f0f9ff 0%,#cbebff 47%,#a1dbff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f0f9ff', endColorstr='#a1dbff',GradientType=1 ); /* IE6-9 */
+}
 
+.tweet-background {
+    background: #f0f8ff;
+}
+
+.is-centered {
+    text-align: center;
+}
+
+.background-wind {
+    background-image: url('/images/wind.png');
+    background-position: center;
+    background-size: 7%;
+    background-repeat: no-repeat;
+    background-position-x: 47%;
 }

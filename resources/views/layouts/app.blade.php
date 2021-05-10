@@ -17,10 +17,12 @@
     <meta name="theme-color" content="#ffffff">
     <!-- Scripts -->
     <script src="{{ asset('js/app.js') }}" defer></script>
+    <script src="http://unpkg.com/turbolinks"></script>
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,900" />
+    <link rel="stylesheet"  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <!-- Styles -->
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     <link href="{{ asset('css/main.css') }}" rel="stylesheet">
@@ -30,8 +32,8 @@
 </head>
 <body>
     <div id="app">
-        <section class="px-2">
-            <header class="container mx-auto">                
+        <section class="px-2 ">
+            <header class="container mx-auto background-wind">                
                 <a href="/"><img src="/images/logo.png" alt="Tweety logo" class="logo"></a>
             </header>
         </section>
@@ -69,5 +71,6 @@
             </div>
         </section>
     </div>
+    
 </body>
 </html>

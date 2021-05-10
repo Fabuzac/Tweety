@@ -22,12 +22,14 @@
                 <p class="text-sm">Joined {{ $user->created_at->diffForHumans() }}</p>
             </div>
 
+            {{-- Edit --}}
             <div class="is-flex">
                 @if (auth()->user()->is($user))
                 {{-- @can ('edit', $user)@endcan --}}
                     <a href="{{ $user->path('edit') }}" class="button rounded-full shadow py-2 px-4 text-xs">Edit Profile</a>
                 @endif
 
+                {{-- Follow --}}
                 @if (auth()->user()->isNot($user))
                                                 {{-- route('follow', $user->name) --}}
                     <form method="POST" action="{{ $user->path('follow') }}"> 
@@ -43,6 +45,7 @@
         </div>        
     </div>
 
+    {{-- BIO --}}
     <p class="text-sm pb-4">
         Mobile Suit Gundam was developed by animator Yoshiyuki Tomino and a 
         changing group of Sunrise creators with the collective pseudonym of 
