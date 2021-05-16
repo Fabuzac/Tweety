@@ -17,6 +17,12 @@
             {{ $tweet->body }}    
         </p>
 
+        <p>
+            @foreach($tags as $tag)
+                <a href="#"> {{ $tag->name }}</a>
+            @endforeach
+        </p>
+
         @auth
             <div class="is-flex mt-3">
                 {{-- Like --}}
