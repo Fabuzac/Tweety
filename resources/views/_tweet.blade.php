@@ -18,8 +18,12 @@
         </p>
 
         <p>
-            @foreach($tags as $tag)
-                <a href="#"> {{ $tag->name }}</a>
+            @foreach($tweet->tags as $tag)
+                <a href="/app/tweet?tag={{ $tag->name }}">#{{ $tag->name }}</a>
+                
+                {{-- Another way to do it --}}
+                {{-- <a href="{{ route('articles.index') ['tag' => $tag->name] }}">{{ $tag->name }}</a> --}}
+
             @endforeach
         </p>
 

@@ -22,30 +22,29 @@ class TweetsController extends Controller {
         return view('tweets.index', [
             'tweets' => auth()->user()->timeline(),
             'tags' => $tags,
-            [ 'tags' => Tag::all() ],
-            
+                
         ]);
     }
 
     public function store() {
 
-        $attributes = request()->validate([
-            'body' => 'required|max:255',
-            'tags' => 'exists:tags,id'
-            ]);
+        $this->validateArticle();
+        
+        $tweet = new tweet(request(['body']));
+        $tweet->user_id = auth()->id(); // auth()->id()
+        $tweet->save();
 
-        Tweet::create([
-            'user_id' => auth()->id(),
-            'body' => $attributes['body'],
-        ]);
+        $tweet->tags()->attach(request('tags'));
 
         return redirect('/tweets' );
-
-        // $tweet = new Tweet(request(['body', 'tags]));
-        // $tweet->user_id = 1; // auth()->id()
-        // $tweet->save();
-
-        // $tweet->tags()->attach(request('tags'));
-
     }
+
+    public function validateArticle() {
+
+        return request()->validate([
+            'body' => 'required|max:255',            
+            'tags' => 'exists:tags,id'
+        ]);
+
+    }    
 }

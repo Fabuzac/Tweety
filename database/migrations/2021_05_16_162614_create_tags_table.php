@@ -19,7 +19,7 @@ class CreateTagsTable extends Migration
             $table->timestamps();
         });
 
-        Schema::create('tweet_tag', function (Blueprint $table) {
+        Schema::create('tag_tweet', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->unsignedBigInteger('tweet_id');
             $table->unsignedBigInteger('tag_id');
@@ -29,7 +29,7 @@ class CreateTagsTable extends Migration
 
             $table->foreign('tweet_id')->references('id')->on('tweets')->onDelete('cascade');
             $table->foreign('tag_id')->references('id')->on('tags')->onDelete('cascade');
-        });
+        }); 
     }
 
     /**
