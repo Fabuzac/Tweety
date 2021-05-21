@@ -5,7 +5,7 @@
 
 ## About Tweety
 
-- Projet d'étude par Laracast.
+- Study project by Laracast.
 - Laravel+ Bulma.css+ Vue.js
 - Twitter Clone
 
